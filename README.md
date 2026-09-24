@@ -1,2 +1,2 @@
-# The py Maze
+# Baguette Maze
 
