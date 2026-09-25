@@ -45,6 +45,7 @@ while game_runtime:
       else:
          print ("Wrong Input :(", "Restarting...", sep='\n')
    elif room == room_2:
+      print ("")
       print ("You enter Baguette's gaming room!")
       print ("A game in the corner of the room starts!")
       print ("") #Idk bruh either I suck at python of end="\n" isn't working :(
@@ -103,8 +104,31 @@ while game_runtime:
       print ("Winning this next game will give you 2 Coins, but losing will reset it to 0!")
       print ("Do you wish to continue??")
       print("")
-      aj = input("Enter Your Decision(y/n) >")
-      print("")
-      if aj == 'y' or aj == "Y":
-         print ('Starting game....')
-         print ("..")
+      
+      while True: 
+         aj = input("Enter Your Decision(y/n) >")
+         print("")
+         if aj == 'y' or aj == "Y":
+            print ('Starting game....')
+            print ("")
+            print ("Question: Who Founded Hack Club?")
+            print ("A. Brendan (I mean he could tbh he is goated)")
+            print ("B. *Zach Latta* :3")
+            print ("C. Orpheus")
+            print ("D. Daven (Oh God, not the planet Destroyer)")
+            arww=input("Enter your answer(A/B/C/D) >")
+            if arww == "A" or arww == 'a':
+               print ("Well, Not the correct answer but Yk :SHRUG3D:")
+               coin = 0:
+               print ("Deducted all coins! Total coins left >", coin)
+               print ("Resetting the entire program")
+            break
+         elif aj == "n" or aj == "N":
+            print ("I see you play safe, Well not everyone is brave enough to take the risk!")
+            print ("Refreshing Program...")
+            print ("")
+            room = room_1
+            break
+         else: 
+            print ("Wrong input, try again.")
+            print ("")
