@@ -20,8 +20,22 @@ while game_runtime:
 
       arg = input("Enter 'yes' to continue or 'no' to finish the program -->")
       if arg == 'Yes'or arg == 'yes' :
-         print ("Loading....", end='\n')
-         room = room_2
+         print ("Well you are a tough explorer aren't you :)")
+         print ("1st Room is Baguette's Gaming Room :3c:")
+         print ("2nd Room is Baguette's Studio :3c:")
+         print ("3rd Room is a secret one >?")
+         print ("")
+         ab = input("Enter Room to enter!(1/2)")
+         if ab == '1':
+            room = room_2
+         elif ab == '2':
+            room = room_3
+         elif ab == '3':
+            print ("Hint: Secret Room opens through Room_2 :3")
+         else: 
+            print ("Error Occured -- > Wrong Datatype :(")
+            print ("Restarting Program...")
+            print ("")
 
       elif arg == 'no'or arg == 'No' :
          print ("You wish to quit the loop and the program follows your command :)")
@@ -51,3 +65,9 @@ while game_runtime:
                print (":( Wrong Answer!")
          except:
             print ("Please enter a numerical value :(")
+   elif room == room_3:
+      print ("You have entered Baguette's Studio Room :yay:")
+      print ("This is where Baguette works on his new ysws(back-to-basics) :3")
+      print ("")
+      print ("Do you know what ysws, this program is being submitted too :$")
+
