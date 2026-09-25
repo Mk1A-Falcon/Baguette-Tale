@@ -20,7 +20,8 @@ while game_runtime:
          print ("Welcome Back to Baguette's room :> I guess you like exploring huh")
          print ("Anyways, Best of luck! :)", "Number of Instances ran :", i)
 
-      arg = input("Enter 'yes' to continue or 'no' to finish the program -->")
+      arg = input("Enter 'yes' to continue or 'no' to finish the program --> ")
+      print ("")
       if arg == 'Yes'or arg == 'yes' :
          print ("Well you are a tough explorer aren't you :)")
          print ("1st Room is Baguette's Gaming Room :3c:")
@@ -37,8 +38,7 @@ while game_runtime:
          else: 
             print ("Error Occured -- > Wrong Datatype :(")
             print ("Restarting Program...")
-            print ("")
-
+         print ("")
       elif arg == 'no'or arg == 'No' :
          print ("You wish to quit the loop and the program follows your command :)")
          game_runtime = False
@@ -96,6 +96,12 @@ while game_runtime:
                   print ("")
                   room = room_1
                   break
+            else:
+               print("Total coins,",coin)
+               print("Resetting program...")
+               print("")
+               room = room_1
+               break
          else:
             print ("Wrong answer :( Try Again?")
    elif room == room_4:
@@ -119,10 +125,29 @@ while game_runtime:
             arww=input("Enter your answer(A/B/C/D) >")
             if arww == "A" or arww == 'a':
                print ("Well, Not the correct answer but Yk :SHRUG3D:")
-               coin = 0:
+               coin = 0
                print ("Deducted all coins! Total coins left >", coin)
-               print ("Resetting the entire program")
-            break
+               print ("Resetting the entire program..")
+               print ("")
+               i = 0
+               room = room_1
+               break
+            elif arww == 'b' or arww == "B" :
+               print ("Correct Answer!")
+               coin +=2
+               print ("Added 2 coins! Total coins =", coin)
+               print ("Redirecting to Main Room :)")
+               room = room_1
+               break
+            else: 
+               print ("Wrong Answer :(")
+               coin = 0
+               print ("Deducted all coins! Total coins left >", coin)
+               print ("Resetting the entire program..")
+               print ("")
+               i=0
+               room = room_1
+               break
          elif aj == "n" or aj == "N":
             print ("I see you play safe, Well not everyone is brave enough to take the risk!")
             print ("Refreshing Program...")
