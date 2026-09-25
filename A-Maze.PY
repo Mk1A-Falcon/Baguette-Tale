@@ -1,8 +1,10 @@
 room_1 = "baguette_room"
 room_2 = "gaming_room # joke i dont have a gaming room :("
 room_3 = "back-to-basics"
+room_4 = "ball required"
 room = ""
 i = 0
+r = 0 #room_3 mechanics
 coin = 0
 
 game_runtime = True
@@ -66,8 +68,43 @@ while game_runtime:
          except:
             print ("Please enter a numerical value :(")
    elif room == room_3:
+      r = 0
       print ("You have entered Baguette's Studio Room :yay:")
       print ("This is where Baguette works on his new ysws(back-to-basics) :3")
       print ("")
       print ("Do you know what ysws, this program is being submitted too :$")
-
+      while True:
+         r += 1
+         ab = input("Enter Answer :3 -->")
+         print ("")
+         if ab == "folktale" or ab == "Folktale" or ab == "FOLKTALE":
+            print ("CORRECT ANSWER :LESSGOO:")
+            coin += 1
+            if r == 1: 
+               print ("It looks like you got it first try :3")
+               print ("Do you want to enter the secret room?? (prize=2coins)")
+               arw = input("Enter (y/n) >")
+               if arw == 'y' or arw == 'Y':
+                  print ("Loading Secret Room :)")
+                  print ("")
+                  room = room_4
+                  break
+               else:
+                  print ("Oke, No entry for you :(")
+                  print ("Refreshing Program...")
+                  print ("")
+                  room = room_1
+                  break
+         else:
+            print ("Wrong answer :( Try Again?")
+   elif room == room_4:
+      print ("Alas explorer, you reach the secret room!")
+      print ("Many have tried, but failed to enter this room")
+      print ("Winning this next game will give you 2 Coins, but losing will reset it to 0!")
+      print ("Do you wish to continue??")
+      print("")
+      aj = input("Enter Your Decision(y/n) >")
+      print("")
+      if aj == 'y' or aj == "Y":
+         print ('Starting game....')
+         print ("..")
