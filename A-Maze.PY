@@ -10,9 +10,22 @@ coin = 0
 game_runtime = True
 while game_runtime:
    if coin == 3:
+      print ("")
       print ("It seems you have collected all 3 coins!")
       op = input ("Trigger Special Ending? (Y/N) >")
+      print ("")
       if op == 'Y' or op == 'y':
+         print ("This program was submitted to #folktale by @Baguette!")
+         print ("Find out more about my projects on github.com/Mk1A-Falcon")
+         print ("This program took 2 hours and 58 minutes for completion, utilizing exception handling, while loops and conditional formatting to create a game like experience!")
+         print ("")
+         print ("As all great things, this program must come to an end :)")
+         print ("Thanks for playing!")
+         game_runtime = False
+         break
+      else:
+         print ("Continuing program! :)")
+         print ("Have fun!")
          print ("")
    if room == "" or room == room_1:
       i += 1
@@ -87,6 +100,8 @@ while game_runtime:
          if ab == "folktale" or ab == "Folktale" or ab == "FOLKTALE":
             print ("CORRECT ANSWER :LESSGOO:")
             coin += 1
+            print ("Added one coin, total coins =", coin)
+            print ("")
             if r == 1: 
                print ("It looks like you got it first try :3")
                print ("Do you want to enter the secret room?? (prize=2coins)")
