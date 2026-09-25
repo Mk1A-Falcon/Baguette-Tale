@@ -9,6 +9,11 @@ coin = 0
 
 game_runtime = True
 while game_runtime:
+   if coin == 3:
+      print ("It seems you have collected all 3 coins!")
+      op = input ("Trigger Special Ending? (Y/N) >")
+      if op == 'Y' or op == 'y':
+         print ("")
    if room == "" or room == room_1:
       i += 1
       if i==1:
@@ -19,6 +24,7 @@ while game_runtime:
       else:
          print ("Welcome Back to Baguette's room :> I guess you like exploring huh")
          print ("Anyways, Best of luck! :)", "Number of Instances ran :", i)
+         print ("Number of Coins", coin)
 
       arg = input("Enter 'yes' to continue or 'no' to finish the program --> ")
       print ("")
